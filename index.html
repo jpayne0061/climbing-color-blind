@@ -21,7 +21,7 @@
 <div class="demo-container" style="width: 70%; height: 60%">
   <img id="img" src="bb.jpg" />
 </div>
-  
+
 
   <script>
     window.onload = function() {
@@ -34,7 +34,7 @@
 
           var hue = hsl[0] * 360;
           var sat = hsl[1];
-          var lgt = hsl[2]; 
+          var lgt = hsl[2];
 
           if (lgt < 0.2)  return "black";
           if (lgt > 0.8)  return "white";
@@ -60,14 +60,14 @@
           return closest == "red";
       });
 
-      
+
       tracking.ColorTracker.registerColor('orange', function(r, g, b) {
           var closest = get_closest_color(r,g,b);
 
           return closest == "orange";
       });
 
-      
+
       tracking.ColorTracker.registerColor('yellow', function(r, g, b) {
           var closest = get_closest_color(r,g,b);
 
