@@ -79,6 +79,8 @@ export function track() {
 
 
     document.getElementById('photo').style.display = 'block';
+    document.getElementById('startbutton').style.display = 'none';
+    
     tracking.track('#photo', tracker);
 
     window.plot = function(x, y, w, h, color) {
