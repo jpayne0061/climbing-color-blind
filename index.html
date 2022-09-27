@@ -25,9 +25,47 @@
     background-color: blueviolet; 
     color: #fff; 
     border-radius: 4px; 
-    padding: 10px; 
+    padding: 3%; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 400%;
+    text-align: center;
+    height: 20%;
   }
+
+
+.butts{
+    background-color: rgb(218, 231, 27); 
+    color: #fff; 
+    border-radius: 4px; 
+    padding: 3%; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 400%;
+    text-align: center;
+    height: 20%;
+}
+
+  #footer {
+   position:fixed;
+   left:0px;
+   bottom:0%;
+   width:100%;
+}
+
+video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: auto;
+      width: 100%;
+    }
+
+
+img {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
 
   </style>
 </head>
@@ -47,12 +85,16 @@
     <img id="photo" alt="The screen capture will appear in this box." style="display: none;" />
   </div>
 </div>
-
-  <div id="startbutton">Tell me the colors</button>
+<div id="footer">
+  <div id="startbutton">Tell me the colors</div>
+    <div id="try-again" class="butts" style="display: none;" onclick="Again()">Try Again</div>
+</div>
 
   <script>
 
-
+    function Again(){
+      location.reload();
+    }
 
   </script>
 

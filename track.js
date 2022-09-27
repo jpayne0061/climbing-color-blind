@@ -80,6 +80,7 @@ export function track() {
 
     document.getElementById('photo').style.display = 'block';
     document.getElementById('startbutton').style.display = 'none';
+    document.getElementById('try-again').style.display = 'block';
     
     tracking.track('#photo', tracker);
 

@@ -37,19 +37,40 @@ import { track } from './track.js';
     }
   
     function startup() {
+
+        const constraints = {
+            video: {
+              facingMode: {
+                exact: "environment"
+              }
+            }
+          };
+
       if (showViewLiveResultButton()) { return; }
       video = document.getElementById('video');
       canvas = document.getElementById('canvas');
       photo = document.getElementById('photo');
       startbutton = document.getElementById('startbutton');
   
-      navigator.mediaDevices.getUserMedia({video: true, audio: false})
+      navigator.mediaDevices.getUserMedia(constraints)
         .then((stream) => {
           video.srcObject = stream;
           video.play();
         })
         .catch((err) => {
           console.error(`An error occurred: ${err}`);
+          
+          const constraints2 = {
+            video: true,
+            facingMode: { exact: 'environment' }
+        };
+
+          navigator.mediaDevices.getUserMedia(constraints2)
+          .then((stream) => {
+            video.srcObject = stream;
+            video.play();
+          })
+
         });
   
       video.addEventListener('canplay', (ev) => {
